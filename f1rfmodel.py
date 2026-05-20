@@ -1,4 +1,4 @@
-#imports (make sure the library is installed on your machine or in a required list)
+#imports (make sure the library is installed on your machine and in a requirements.txt file)
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
