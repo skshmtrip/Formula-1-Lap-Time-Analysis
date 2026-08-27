@@ -1,7 +1,7 @@
 # Environmental Effects on Lap Times: Race vs Qualifying Analysis
 
 ## OVERVIEW
-This project investigates how track and air temperatures can affect a Max Verstappen's lap time across qualifying sessions at the Miami GP in Formula 1 specified to the model. Using the telemetry and weather data from the 2022 and 2023 seasons, I perform hypothesis testing (t-test specifically) to compare lap time distributions in environmental conditions during qualifying.
+This project investigates how track and air temperatures can affect Max Verstappen's lap time across qualifying sessions at the Miami GP in Formula 1 specified to the model. Using the telemetry and weather data from the 2022 and 2023 seasons, I perform hypothesis testing (t-test specifically) to compare lap time distributions in environmental conditions during qualifying.
 
 ## RESEARCH QUESTION
 Do track and air temperature significantly influence simulated lap times, and does this effect differ in qualifying sessions at Miami?
@@ -19,7 +19,7 @@ The dataset contains telemetry and weather information for the 2022 and 2023 For
 Laps affected by incidents or outliers were removed to ensure clean, independent comparisons.
 
 ## HYPOTHESIS TESTING
-To see how track and air temps mess with lap times, I used the Random Forest model to simulate Max Verstappen’s qualifying laps at Miami GP across different environmental conditions. Then I ran t-tests on these predicted lap times to check if the differences were significant.
+To see how track and air temps affect with lap times, I used the Random Forest model to simulate Max Verstappen’s qualifying laps at Miami GP across different environmental conditions. Then I ran t-tests on these predicted lap times to check if the differences were significant.
 ### Testing Process:
 1. Set up the simulations:
    - Driver Number: 1 (Max Verstappen)
@@ -33,9 +33,9 @@ To see how track and air temps mess with lap times, I used the Random Forest mod
    - Low TrackTemp/AirTemp (below median lap time)
    - High TrackTemp/AirTemp (above median lap time)
 3. Simulate data using the model
-4. Low environmental temperature lap times go in one list, high environmental temerature lap times go in another
+4. Low environmental temperature lap times go in one list, high environmental temperature lap times go in another
 5. Run t-test
-6. Record pvalue and t value, compare p value with alpha value of 0.05 (with respect to confidence being 0.95)
+6. Record p-value and t value, compare p value with alpha value of 0.05 (with respect to confidence being 0.95)
 7. Conclude hypothesis.
 
 ### Testing:
