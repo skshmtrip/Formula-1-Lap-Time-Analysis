@@ -16,7 +16,7 @@ The dataset contains telemetry and weather information for the 2022 and 2023 For
 - SessionType: Qualifying (Q)
 - TrackTemp (C) & AirTemp (C): weather variables
 - Driver & Event: Max Verstappen (1) and Miami GP
-Laps affected by incidents or outliers were removed to ensure clean, independent comparisons.
+Laps affected by incidents or outliers were removed to ensure clean comparisons.
 
 ## HYPOTHESIS TESTING
 To see how track and air temps affect with lap times, I used the Random Forest model to simulate Max Verstappen’s qualifying laps at Miami GP across different environmental conditions. Then I ran t-tests on these predicted lap times to check if the differences were significant.
@@ -30,8 +30,8 @@ To see how track and air temps affect with lap times, I used the Random Forest m
    - Constant variables: Driver Number, Session, and Event Name
    - Varying variables: Track Temperature and Air Temperature
 2. Make groups for t-test:
-   - Low TrackTemp/AirTemp (below median lap time)
-   - High TrackTemp/AirTemp (above median lap time)
+   - Low TrackTemp/AirTemp (TrackTemp below median)
+   - High TrackTemp/AirTemp (TrackTemp above median)
 3. Simulate data using the model
 4. Low environmental temperature lap times go in one list, high environmental temperature lap times go in another
 5. Run t-test
@@ -40,7 +40,7 @@ To see how track and air temps affect with lap times, I used the Random Forest m
 
 ### Testing:
 Data:
-| Air Temp | Track Temp | Lap Time |
+| Track Temp | Air Temp | Lap Time |
 |----------|------------|----------|
 | 25       | 33         | 96.39    |
 | 26       | 34         | 93.78    |
@@ -69,4 +69,4 @@ p = 0.015
 - Reject Null Hypothesis.
 
 ## FINAL VERDICT
-Due to null hypothesis being rejectable, we can conclude that simulated lap times differ significantly under varying environmental temperatures at Miami.
+Under the specified Random Forest simulation, predicted lap times differed between the selected lower- and higher-temperature conditions at Miami.
